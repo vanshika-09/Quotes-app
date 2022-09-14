@@ -54,8 +54,8 @@ const showQuotes = (id) => {
       catg = "angryQuotes";
       break;
   }
-
-  let url = `https://anonic-quotesapi.herokuapp.com/62cfbb9123b1930016ed8232/${catg}`;
+  let api_key = "XYZ"; /*API KEY OF QUOTES APP*/
+  let url = `https://anonic-quotesapi.herokuapp.com/${api_key}/${catg}`;
   $.get(url, (resp) => {
     // $("#category_quotes").fadeIn("slow");
     populateQuotes(resp);
