@@ -1,0 +1,215 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUOTES</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        background-color: #a309aa;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23A309AA'/%3E%3Cstop offset='1' stop-color='%234F44FF'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FF40CB' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FF40CB' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23FF40CB' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FF40CB' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .navbar {
+        height: 100px;
+        margin-top: 2%;
+        background-color: rgb(240, 70, 98);
+        color: rgb(240, 70, 98);
+        padding-left: 20px;
+      }
+      .navbar-brand {
+        font-weight: bold;
+        color: white;
+      }
+    </style>
+    <link rel="stylesheet" href="./libs/bootstrap.min.css" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="libs/jquery-3.6.0.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="categories_wrapper">
+        <nav class="navbar">
+          <div class="navbar-brand" style="font-size: 60px">
+            <img
+              src="images/quotes.webp"
+              width="70"
+              height="70"
+              class="d-inline-block align-top"
+            />
+            Quotes
+          </div>
+        </nav>
+
+        <div class="container mt-5" id="quotes"></div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card border-danger mb-3" style="max-width: 20rem">
+              <img
+                class="card-img-top"
+                src="images/MOTIVATION.jpg"
+                style="border-radius: 3px"
+              />
+              <div class="card-body">
+                <h3 class="card-title text-center">Motivation Quotes</h3>
+
+                <button
+                  type="button"
+                  class="btn btn-danger btn-lg btn-block"
+                  style="margin-left: 100px"
+                  onclick="showQuotes(0)"
+                >
+                  Click
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card border-danger mb-3" style="max-width: 20rem">
+              <img
+                class="card-img-top"
+                src="images/LOVE.jpg"
+                style="border-radius: 3px"
+              />
+              <div class="card-body">
+                <h3 class="card-title text-center">Love Quotes</h3>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-lg btn-block"
+                  style="margin-left: 100px"
+                  onclick="showQuotes(1)"
+                >
+                  Click
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-danger mb-3" style="max-width: 20rem">
+              <img
+                class="card-img-top"
+                src="images/sorry.jpg"
+                style="border-radius: 3px"
+              />
+              <div class="card-body">
+                <h3 class="card-title text-center">Sorry Quotes</h3>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-lg btn-block"
+                  style="margin-left: 100px"
+                  onclick="showQuotes(2)"
+                >
+                  Click
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="margin-top: 5%">
+          <div class="col-md-4">
+            <div class="card border-danger mb-3" style="max-width: 20rem">
+              <img
+                class="card-img-top"
+                src="images/emotional.jpg"
+                style="border-radius: 3px"
+              />
+              <div class="card-body">
+                <h3 class="card-title text-center">Emotional Quotes</h3>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-lg btn-block"
+                  style="margin-left: 100px"
+                  onclick="showQuotes(3)"
+                >
+                  Click
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-danger mb-3" style="max-width: 20rem">
+              <img
+                class="card-img-top"
+                src="images/crush.jpg"
+                style="border-radius: 3px"
+              />
+              <div class="card-body">
+                <h3 class="card-title text-center">Crush Quotes</h3>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-lg btn-block"
+                  style="margin-left: 100px"
+                  onclick="showQuotes(4)"
+                >
+                  Click
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card border-danger mb-3" style="max-width: 20rem">
+              <img
+                class="card-img-top"
+                src="images/angry.jpg"
+                style="border-radius: 3px"
+              />
+              <div class="card-body">
+                <h3 class="card-title text-center">ANGRY Quotes</h3>
+                <button
+                  type="button"
+                  class="btn btn-danger btn-lg btn-block"
+                  style="margin-left: 100px"
+                  onclick="showQuotes(5)"
+                >
+                  Click
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="category_quotes"
+        style="display: none; width: 80%; margin-top: 4%; margin-left: 15%"
+      >
+        <div
+          class="spinner-border text-danger"
+          id="loader"
+          role="status"
+          style="margin-top: 45%; margin-left: 40%; font-size: large"
+        ></div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
